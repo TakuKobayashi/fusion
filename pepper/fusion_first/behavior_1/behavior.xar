@@ -248,7 +248,7 @@ class MyClass(GeneratedClass):
                                 </ActuatorList>
                             </Timeline>
                         </Box>
-                        <Box name="pose_4" id="5" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="406" y="268">
+                        <Box name="pose_4" id="5" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="381" y="216">
                             <bitmap>media/images/box/movement/move.png</bitmap>
                             <script language="4">
                                 <content>
@@ -293,7 +293,98 @@ class MyClass(GeneratedClass):
                                 </ActuatorList>
                             </Timeline>
                         </Box>
-                        <Box name="Go to position Stand" id="6" localization="8" tooltip="Robot will go to the position Stand&lt;br/&gt;Position description : Standing position with low power consumption. " x="449" y="488">
+                        <Box name="pose_5" id="6" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="184" y="420">
+                            <bitmap>media/images/box/movement/move.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                            <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                            <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+                            <Timeline enable="1" fps="25" start_frame="1" end_frame="-1" size="75">
+                                <BehaviorLayer name="behavior_layer1">
+                                    <BehaviorKeyframe name="keyframe1" index="1">
+                                        <Diagram />
+                                    </BehaviorKeyframe>
+                                </BehaviorLayer>
+                                <ActuatorList model="juliette">
+                                    <ActuatorCurve name="" actuator="HeadPitch" recordable="0" mute="0" unit="0">
+                                        <Key frame="75" value="12.3" />
+                                    </ActuatorCurve>
+                                    <ActuatorCurve name="" actuator="HeadYaw" recordable="0" mute="0" unit="0">
+                                        <Key frame="75" value="0" />
+                                    </ActuatorCurve>
+                                    <ActuatorCurve name="" actuator="HipRoll" recordable="0" mute="0" unit="0">
+                                        <Key frame="75" value="29.5" />
+                                    </ActuatorCurve>
+                                    <ActuatorCurve name="" actuator="KneePitch" recordable="0" mute="0" unit="0">
+                                        <Key frame="75" value="14.8" />
+                                    </ActuatorCurve>
+                                    <ActuatorCurve name="" actuator="LElbowRoll" recordable="0" mute="0" unit="0">
+                                        <Key frame="75" value="-89.5" />
+                                    </ActuatorCurve>
+                                    <ActuatorCurve name="" actuator="LShoulderPitch" recordable="0" mute="0" unit="0">
+                                        <Key frame="75" value="-46.6" />
+                                    </ActuatorCurve>
+                                    <ActuatorCurve name="" actuator="LShoulderRoll" recordable="0" mute="0" unit="0">
+                                        <Key frame="75" value="74.3" />
+                                    </ActuatorCurve>
+                                    <ActuatorCurve name="" actuator="RElbowRoll" recordable="0" mute="0" unit="0">
+                                        <Key frame="75" value="48.2" />
+                                    </ActuatorCurve>
+                                    <ActuatorCurve name="" actuator="RShoulderPitch" recordable="0" mute="0" unit="0">
+                                        <Key frame="75" value="-70.8" />
+                                    </ActuatorCurve>
+                                    <ActuatorCurve name="" actuator="RShoulderRoll" recordable="0" mute="0" unit="0">
+                                        <Key frame="75" value="-11" />
+                                    </ActuatorCurve>
+                                </ActuatorList>
+                            </Timeline>
+                        </Box>
+                        <Box name="Wait" id="7" localization="8" tooltip="Wait a moment before sending a signal on the output. &#x0A;Can be stopped anytime. &#x0A;Stimulating the input again before output is activated restarts the waiting period.&#x0A;" x="337" y="608">
+                            <bitmap>media/images/box/wait.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.waiting = None
+
+    def onUnload(self):
+        self.cancelWaiting()
+
+    def triggerOutput(self):
+        self.timerOutput()
+
+    def cancelWaiting(self):
+        if self.waiting:
+            self.waiting.cancel()
+        self.waiting = None
+
+    def onInput_onStart(self):
+        self.cancelWaiting()
+        import qi
+        self.waiting = qi.async(self.triggerOutput, delay=int(self.getParameter("Timeout (s)") * 1000 * 1000))
+
+    def onInput_onStop(self):
+        if self.getParameter("Trigger timerOutput if cancelled") and self.waiting and self.waiting.isRunning():
+            self.timerOutput()
+        self.onUnload()]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                            <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Start the Wait box with the configured timeout value." id="2" />
+                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Stop the wait and stimulate the output." id="3" />
+                            <Output name="timerOutput" type="1" type_size="1" nature="1" inner="0" tooltip="Send a bang once time set in parameters is elapsed, or if the box is stopped and the appropriate parameter is set." id="4" />
+                            <Parameter name="Timeout (s)" inherits_from_parent="0" content_type="2" value="5" default_value="1" min="0" max="5000" tooltip="Duration the box waits before stimulating the output." id="5" />
+                            <Parameter name="Trigger timerOutput if cancelled" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="If the box is currently waiting and cancelled, output will be stimulated." id="6" />
+                        </Box>
+                        <Box name="Go to position Stand" id="8" localization="8" tooltip="Robot will go to the position Stand&#x0A;Position description : Standing position with low power consumption. " x="502" y="591">
                             <bitmap>media/images/positions/Stand.png</bitmap>
                             <script language="4">
                                 <content>
@@ -346,7 +437,9 @@ class MyClass(GeneratedClass):
                         <Link inputowner="4" indexofinput="2" outputowner="3" indexofoutput="4" />
                         <Link inputowner="5" indexofinput="2" outputowner="4" indexofoutput="4" />
                         <Link inputowner="6" indexofinput="2" outputowner="5" indexofoutput="4" />
-                        <Link inputowner="0" indexofinput="4" outputowner="6" indexofoutput="4" />
+                        <Link inputowner="8" indexofinput="2" outputowner="7" indexofoutput="4" />
+                        <Link inputowner="0" indexofinput="4" outputowner="8" indexofoutput="4" />
+                        <Link inputowner="7" indexofinput="2" outputowner="6" indexofoutput="4" />
                     </Diagram>
                 </BehaviorKeyframe>
             </BehaviorLayer>
