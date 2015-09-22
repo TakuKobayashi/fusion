@@ -5,7 +5,9 @@
         <BehaviorDescription name="behavior" src="behavior_1" xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs />
-    <Resources />
+    <Resources>
+        <File name="move_fusion" src="move_fusion.pmt" />
+    </Resources>
     <Topics />
     <IgnoredPaths />
 </Package>
