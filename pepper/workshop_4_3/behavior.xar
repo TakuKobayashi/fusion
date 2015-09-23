@@ -16,7 +16,7 @@
         <Timeline enable="0">
             <BehaviorLayer name="behavior_layer1">
                 <BehaviorKeyframe name="keyframe1" index="1">
-                    <Diagram scale="84.0896">
+                    <Diagram scale="100">
                         <Box name="Show App" id="2" localization="8" tooltip="Loads the application on the tablet, if it exists, and displays the webview.&#x0A;&#x0A;V1.0.0&#x0A;" x="1639" y="776">
                             <bitmap>media/images/box/root.png</bitmap>
                             <script language="4">
@@ -1787,7 +1787,7 @@ class MyClass(GeneratedClass):
                             <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="6" />
                             <Parameter name="ImageUrl" inherits_from_parent="0" content_type="3" value="fusion_web.jpg" default_value="" custom_choice="0" tooltip='path of the image inside the &quot;html&quot; folder (e.g. &quot;/images/myimage.png&quot;' id="7" />
                         </Box>
-                        <Box name="Go to position Stand" id="11" localization="8" tooltip="Robot will go to the position Stand&#x0A;Position description : Standing position with low power consumption. " x="521" y="227">
+                        <Box name="Go to position Stand" id="11" localization="8" tooltip="Robot will go to the position Stand&#x0A;Position description : Standing position with low power consumption. " x="453" y="226">
                             <bitmap>media/images/positions/Stand.png</bitmap>
                             <script language="4">
                                 <content>
