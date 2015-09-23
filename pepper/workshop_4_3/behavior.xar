@@ -3758,7 +3758,6 @@ class MyClass(GeneratedClass):
                         <Link inputowner="4" indexofinput="2" outputowner="0" indexofoutput="2" />
                         <Link inputowner="8" indexofinput="2" outputowner="10" indexofoutput="4" />
                         <Link inputowner="19" indexofinput="2" outputowner="4" indexofoutput="10" />
-                        <Link inputowner="19" indexofinput="2" outputowner="4" indexofoutput="8" />
                         <Link inputowner="2" indexofinput="2" outputowner="9" indexofoutput="7" />
                         <Link inputowner="23" indexofinput="4" outputowner="0" indexofoutput="2" />
                         <Link inputowner="14" indexofinput="2" outputowner="13" indexofoutput="4" />
@@ -3783,14 +3782,14 @@ class MyClass(GeneratedClass):
                         <Link inputowner="18" indexofinput="2" outputowner="6" indexofoutput="9" />
                         <Link inputowner="18" indexofinput="2" outputowner="5" indexofoutput="9" />
                         <Link inputowner="26" indexofinput="2" outputowner="0" indexofoutput="2" />
-                        <Link inputowner="29" indexofinput="2" outputowner="4" indexofoutput="8" />
                         <Link inputowner="29" indexofinput="2" outputowner="4" indexofoutput="9" />
-                        <Link inputowner="29" indexofinput="2" outputowner="4" indexofoutput="10" />
                         <Link inputowner="13" indexofinput="2" outputowner="29" indexofoutput="5" />
                         <Link inputowner="13" indexofinput="2" outputowner="29" indexofoutput="4" />
                         <Link inputowner="34" indexofinput="2" outputowner="20" indexofoutput="4" />
                         <Link inputowner="25" indexofinput="2" outputowner="34" indexofoutput="4" />
                         <Link inputowner="25" indexofinput="2" outputowner="34" indexofoutput="5" />
+                        <Link inputowner="29" indexofinput="2" outputowner="4" indexofoutput="8" />
+                        <Link inputowner="29" indexofinput="2" outputowner="4" indexofoutput="10" />
                     </Diagram>
                 </BehaviorKeyframe>
             </BehaviorLayer>

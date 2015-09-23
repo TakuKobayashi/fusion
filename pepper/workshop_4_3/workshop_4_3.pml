@@ -16,6 +16,7 @@
         <File name="fusion_move" src="html/fusion_move.pmt" />
         <File name="lelele" src="html/lelele.JPG" />
         <File name="supermario" src="supermario.mp3" />
+        <File name="fusion_move" src="fusion_move.pmt" />
     </Resources>
     <Topics>
         <Topic name="ExampleDialog_jpj" src="ExampleDialog/ExampleDialog_jpj.top" topicName="ExampleDialog" language="ja_JP" />
