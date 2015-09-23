@@ -21,7 +21,7 @@
         <Topic name="ExampleDialog_jpj" src="ExampleDialog/ExampleDialog_jpj.top" topicName="ExampleDialog" language="ja_JP" />
     </Topics>
     <IgnoredPaths>
-        <Path src=".DS_Store" />
         <Path src="html/.DS_Store" />
+        <Path src=".DS_Store" />
     </IgnoredPaths>
 </Package>
