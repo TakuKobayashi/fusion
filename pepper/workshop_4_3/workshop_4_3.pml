@@ -4,13 +4,24 @@
     <BehaviorDescriptions>
         <BehaviorDescription name="behavior" src="." xar="behavior.xar" />
     </BehaviorDescriptions>
-    <Dialogs />
+    <Dialogs>
+        <Dialog name="ExampleDialog" src="ExampleDialog/ExampleDialog.dlg" />
+    </Dialogs>
     <Resources>
         <File name="index" src="html/index.html" />
         <File name="workshop_4_4" src="workshop_4_4.pml" />
-        <File name="" src=".DS_Store" />
-        <File name="" src="html/.DS_Store" />
+        <File name="small" src="html/small.mp4" />
+        <File name="golf" src="golf.ogg" />
+        <File name="fusion_web" src="html/fusion_web.jpg" />
+        <File name="fusion_move" src="html/fusion_move.pmt" />
+        <File name="lelele" src="html/lelele.JPG" />
+        <File name="supermario" src="supermario.mp3" />
     </Resources>
-    <Topics />
-    <IgnoredPaths />
+    <Topics>
+        <Topic name="ExampleDialog_jpj" src="ExampleDialog/ExampleDialog_jpj.top" topicName="ExampleDialog" language="ja_JP" />
+    </Topics>
+    <IgnoredPaths>
+        <Path src=".DS_Store" />
+        <Path src="html/.DS_Store" />
+    </IgnoredPaths>
 </Package>
