@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<package version="0.0.0" uuid="workshop_4_3-1f2ed2">
+<package uuid="workshop_4_3-1f2ed2" version="0.0.0">
  <names>
   <name lang="en_US">workshop_4_3</name>
  </names>
@@ -10,8 +10,11 @@
   <language>en_US</language>
  </descriptionLanguages>
  <contents>
-  <behaviorContent path=".">
+  <behaviorContent path="ExampleDialog">
    <nature>interactive</nature>
+   <triggerSentences/>
+   <loadingResponses/>
+   <autonomous/>
    <permissions/>
   </behaviorContent>
  </contents>
