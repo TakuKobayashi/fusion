@@ -27,7 +27,7 @@
         <Topic name="Yeah-Dialog_jpj" src="Yeah-Dialog/Yeah-Dialog_jpj.top" topicName="Yeah-Dialog" language="ja_JP" />
     </Topics>
     <IgnoredPaths>
-        <Path src="html/.DS_Store" />
         <Path src=".DS_Store" />
+        <Path src="html/.DS_Store" />
     </IgnoredPaths>
 </Package>
