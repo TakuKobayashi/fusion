@@ -2,14 +2,13 @@
 <Package name="workshop_4_3" format_version="4">
     <Manifest src="manifest.xml" />
     <BehaviorDescriptions>
-        <BehaviorDescription name="behavior" src="ExampleDialog" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="." xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs>
-        <Dialog name="ExampleDialog" src="ExampleDialog/ExampleDialog.dlg" />
+        <Dialog name="Yeah-Dialog" src="Yeah-Dialog/Yeah-Dialog.dlg" />
     </Dialogs>
     <Resources>
         <File name="index" src="html/index.html" />
-        <File name="workshop_4_4" src="workshop_4_4.pml" />
         <File name="small" src="html/small.mp4" />
         <File name="golf" src="golf.ogg" />
         <File name="fusion_move" src="html/fusion_move.pmt" />
@@ -21,9 +20,11 @@
         <File name="haa" src="html/haa.wav" />
         <File name="jyon" src="html/jyon.wav" />
         <File name="camera1" src="camera1.ogg" />
+        <File name="fusion_effect" src="html/fusion_effect.mp4" />
+        <File name="fusion_effect2" src="html/fusion_effect2.mp4" />
     </Resources>
     <Topics>
-        <Topic name="ExampleDialog_jpj" src="ExampleDialog/ExampleDialog_jpj.top" topicName="ExampleDialog" language="ja_JP" />
+        <Topic name="Yeah-Dialog_jpj" src="Yeah-Dialog/Yeah-Dialog_jpj.top" topicName="Yeah-Dialog" language="ja_JP" />
     </Topics>
     <IgnoredPaths>
         <Path src="html/.DS_Store" />

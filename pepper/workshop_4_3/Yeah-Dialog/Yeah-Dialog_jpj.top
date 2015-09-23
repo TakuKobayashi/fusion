@@ -1,4 +1,4 @@
-topic: ~ExampleDialog()
+topic: ~Yeah-Dialog()
 language: jpj
 
 # Defining extra concepts out of words or group of words
@@ -8,6 +8,7 @@ language: jpj
 #u:(e:onStart) $onStopped=1
 
 # Replying to speech
+#u:(~hello) ~hello
 u:(やー) やーーーーーーーーー
 u:(やぁ) やーーーーーーーーー
 u:(や) やーーーーーーーーー
