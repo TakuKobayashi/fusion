@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<package uuid="fusion_first-d97fb6" version="0.0.0">
+<package version="0.0.0" uuid="safe_standup-501aaf">
  <names>
-  <name lang="en_US">fusion_first</name>
+  <name lang="en_US">Safe_StandUp</name>
  </names>
  <supportedLanguages>
   <language>en_US</language>
@@ -10,15 +10,8 @@
   <language>en_US</language>
  </descriptionLanguages>
  <contents>
-  <behaviorContent path=".">
+  <behaviorContent path="behavior_1">
    <userRequestable/>
-   <nature>interactive</nature>
-   <triggerSentences/>
-   <loadingResponses/>
-   <autonomous/>
-   <permissions/>
-  </behaviorContent>
-  <behaviorContent path="Safe_StandUp">
    <nature>interactive</nature>
    <triggerSentences/>
    <loadingResponses/>
